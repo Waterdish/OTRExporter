@@ -185,7 +185,7 @@ if (CMAKE_SYSTEM_NAME STREQUAL "Android")
     target_link_libraries(${PROJECT_NAME} PUBLIC tinyxml2::tinyxml2)
 
     find_package(libzip REQUIRED)
-    target_link_libraries(libultraship PRIVATE libzip::zip)
+    target_link_libraries(${PROJECT_NAME} PRIVATE libzip::zip)
     target_include_directories(${PROJECT_NAME} PUBLIC ${libzip_SOURCE_DIR}/lib ${libzip_BINARY_DIR})
 endif()
 
